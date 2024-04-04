@@ -4,8 +4,12 @@ from fastapi import APIRouter
 
 router = APIRouter()
 
+@router.get("/")
+async def root():
+    return {"message": "Hello World"}
+
 # http://127.0.0.1:8000/type
-@router.get("/type")
+@router.get("/module_01/type")
 def type():
     return {
         "int": 24,

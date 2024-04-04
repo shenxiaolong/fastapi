@@ -7,7 +7,7 @@ from fastapi import APIRouter
 
 router = APIRouter()
 
-@router.get("/items/{item_id}")
+@router.get("/module_02/items/{item_id}")
 def items(item_id: int):
     return {"item_id": item_id}
 
@@ -16,6 +16,6 @@ class FruitsEnum(str, Enum):
     banana = "banana"
     orange = "orange"
 
-@router.get("/fruits/{fruit}")
+@router.get("/module_02/fruits/{fruit}")
 async def fruits(fruit: FruitsEnum):
     return fruit
